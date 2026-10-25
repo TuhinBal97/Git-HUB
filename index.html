@@ -3,150 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10111d">
-  <meta name="description" content="A little hello from the web.">
-  <title>Hi There, This is Tuhin here!</title>
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="A tiny interactive hello from Tuhin's corner of the web.">
+  <title>Hello, World! — Tuhin's playground</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
-    :root {
-      color-scheme: dark;
-      font-family: 'DM Sans', sans-serif;
-      background: #10111d;
-      color: #f7f5ff;
-      font-synthesis: none;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse at 18% 18%, #5536ab55 0, transparent 38%),
-        radial-gradient(ellipse at 82% 82%, #067e9450 0, transparent 36%),
-        #10111d;
-    }
-
-    body::before, body::after {
-      content: '';
-      position: fixed;
-      width: 28rem;
-      height: 28rem;
-      border: 1px solid #ffffff0c;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    body::before { top: -15rem; right: -7rem; box-shadow: 0 0 0 3rem #ffffff04, 0 0 0 6rem #ffffff03; }
-    body::after { bottom: -18rem; left: -8rem; box-shadow: 0 0 0 3rem #ffffff04, 0 0 0 6rem #ffffff03; }
-
-    main {
-      position: relative;
-      width: min(680px, calc(100% - 40px));
-      padding: clamp(2rem, 7vw, 4.5rem);
-      text-align: center;
-      border: 1px solid #ffffff20;
-      border-radius: 28px;
-      background: linear-gradient(145deg, #ffffff12, #ffffff05 65%);
-      box-shadow: 0 32px 100px #0007, inset 0 1px #ffffff1c;
-      backdrop-filter: blur(18px);
-      animation: arrive 900ms cubic-bezier(.2,.8,.2,1) both;
-    }
-
-    .sparkle {
-      display: grid;
-      place-items: center;
-      width: 68px;
-      height: 68px;
-      margin: 0 auto 2rem;
-      border: 1px solid #ffffff24;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #a78bfa35, #38d9e835);
-      font-size: 2rem;
-      box-shadow: 0 0 42px #8b5cf633;
-    }
-
-    .eyebrow {
-      margin: 0 0 1rem;
-      color: #b9b0d3;
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3.4rem, 12vw, 6.25rem);
-      line-height: .98;
-      letter-spacing: -.075em;
-    }
-
-    h1 span {
-      color: transparent;
-      background: linear-gradient(100deg, #c4b5fd 12%, #67e8f9 88%);
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    .message {
-      max-width: 390px;
-      margin: 1.5rem auto 2.2rem;
-      color: #c1bfd0;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      gap: .65rem;
-      padding: .9rem 1.25rem;
-      border: 1px solid #ffffff2c;
-      border-radius: 999px;
-      color: #fff;
-      background: #ffffff12;
-      font: 600 .92rem 'DM Sans', sans-serif;
-      text-decoration: none;
-      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-    }
-    .button:hover { transform: translateY(-2px); border-color: #c4b5fd80; background: #ffffff1d; }
-    .button:focus-visible { outline: 3px solid #67e8f9; outline-offset: 4px; }
-    .arrow { color: #67e8f9; font-size: 1.1rem; }
-
-    .footer {
-      position: fixed;
-      bottom: 1.5rem;
-      color: #858296;
-      font-size: .78rem;
-      letter-spacing: .04em;
-    }
-
-    @keyframes arrive {
-      from { opacity: 0; transform: translateY(18px) scale(.985); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-    }
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    :root{color-scheme:dark;font-family:'DM Sans',sans-serif;background:#090d18;color:#edf3ff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;--mint:#87f7c5;--violet:#b69cff;--muted:#91a0b7}
+    *{box-sizing:border-box} body{min-height:100vh;margin:0;overflow-x:hidden;background:radial-gradient(ellipse at 16% 10%,#56319a35,transparent 34%),radial-gradient(ellipse at 88% 88%,#087f7830,transparent 35%),#090d18}
+    body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+    .wrap{width:min(1100px,calc(100% - 40px));margin:auto;padding:34px 0 26px;position:relative}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:65px;color:#9caac0;font:500 .79rem 'JetBrains Mono',monospace}.brand{display:flex;align-items:center;gap:10px}.site-nav{display:flex;gap:8px}.site-nav a{padding:9px 12px;border:1px solid transparent;border-radius:8px;color:#9caac0;text-decoration:none}.site-nav a:hover,.site-nav a[aria-current="page"]{color:#edf3ff;background:#ffffff09;border-color:#ffffff15}.brand-mark{width:30px;height:30px;display:grid;place-items:center;border:1px solid #ffffff20;border-radius:9px;color:var(--mint);background:#ffffff08;font-size:1rem}.online{display:flex;gap:8px;align-items:center}.online i{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,100px);align-items:center;padding-bottom:70px}.eyebrow{font:600 .75rem 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--mint);margin:0 0 20px}.eyebrow:before{content:'// ';color:#60718d}h1{font:700 clamp(3.8rem,8.5vw,7rem)/.91 'Space Grotesk',sans-serif;letter-spacing:-.075em;margin:0}h1 span{display:block;margin-top:12px;color:transparent;background:linear-gradient(100deg,#c7b3ff,#79e9f4 80%);background-clip:text;-webkit-background-clip:text}.intro{max-width:440px;color:#a9b4c8;font-size:1.02rem;line-height:1.8;margin:27px 0 0}.intro strong{color:#eef4ff;font-weight:600}.hint{margin-top:22px;color:#7c8ba3;font:500 .74rem 'JetBrains Mono',monospace}
+    .terminal{overflow:hidden;border:1px solid #c7d8ff22;border-radius:16px;background:linear-gradient(145deg,#111a2b,#0d1320);box-shadow:0 28px 80px #0008,0 0 60px #9774ff0a;transform:rotate(1deg);transition:transform .3s ease,border-color .3s ease}.terminal:hover{transform:rotate(0) translateY(-4px);border-color:#9e8aff55}.term-top{height:48px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff0d;background:#ffffff04}.dots{display:flex;gap:7px}.dots i{width:9px;height:9px;border-radius:50%;background:#ff6b72}.dots i:nth-child(2){background:#f8c45c}.dots i:nth-child(3){background:#64d99b}.filename{color:#8190a8;font:500 .7rem 'JetBrains Mono',monospace}.term-body{padding:26px 24px 20px;min-height:210px;font:500 .83rem/2 'JetBrains Mono',monospace}.prompt{color:var(--mint)}.cmd{color:#e5eaff}.comment{color:#71819a}.output{color:#d0c4ff}.cursor{display:inline-block;width:8px;height:16px;vertical-align:-3px;background:var(--mint);animation:blink 1s steps(2) infinite}.term-actions{display:flex;justify-content:space-between;align-items:center;padding:0 20px 18px}.run,.copy{border:1px solid #ffffff1c;border-radius:8px;padding:9px 13px;color:#e7eeff;background:#ffffff08;font:600 .73rem 'JetBrains Mono',monospace;cursor:pointer;transition:.18s}.run{background:#9ff4c21b;border-color:#87f7c544;color:var(--mint)}.run:hover,.copy:hover{transform:translateY(-2px);background:#ffffff17}.run:focus-visible,.copy:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.run[disabled]{opacity:.65;cursor:wait}.status{color:#70809a;font:500 .68rem 'JetBrains Mono',monospace}
+    .lower{border-top:1px solid #ffffff13;padding-top:25px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#78879f;font:500 .73rem 'JetBrains Mono',monospace}.lower span b{color:#a997f4;font-weight:500}.social{color:#97a5ba;text-decoration:none}.social:hover{color:var(--mint)}
+    @keyframes blink{to{visibility:hidden}}@keyframes pop{0%{opacity:0;transform:translateY(5px)}100%{opacity:1;transform:translateY(0)}}.new-line{animation:pop .25s ease both}
+    @media(max-width:760px){.wrap{padding-top:22px}header{margin-bottom:47px}.hero{grid-template-columns:1fr;gap:38px;padding-bottom:46px}.terminal{transform:none}.lower{align-items:flex-start;flex-direction:column;gap:10px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
-  <main>
-    <div class="sparkle" aria-hidden="true">✦</div>
-    <p class="eyebrow">A small beginning</p>
-    <h1>Hi There<br><span>This is Tuhin</span></h1>
-    <p class="message">A little page with a lot of possibility. Here’s to whatever you make next.</p>
-    <a class="button" href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noreferrer">
-      Explore the web <span class="arrow" aria-hidden="true">↗</span>
-    </a>
-  </main>
-  <div class="footer">Made with a little wonder&nbsp; ✨</div>
+  <div class="wrap">
+    <header><div class="brand"><span class="brand-mark">&lt;/&gt;</span><span>tuhin.dev</span></div><nav class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><div class="online"><i></i> available for ideas</div></header>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div><p class="eyebrow">A tiny playground</p><h1 id="title">Hello,<span>World!</span></h1><p class="intro">Hey, I’m <strong>Tuhin</strong> — welcome to my little corner of the internet. Every great build starts with one line of code. Go ahead and run it.</p><p class="hint">↓ &nbsp;your first command is ready</p></div>
+        <section class="terminal" aria-label="Interactive code terminal">
+          <div class="term-top"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="filename">hello-world.js</span><span style="width:36px"></span></div>
+          <div class="term-body" id="terminalOutput" aria-live="polite"><div><span class="comment">// the classic first step</span></div><div><span class="prompt">$</span> <span class="cmd">node hello-world.js</span></div><div class="output">Hello, World! <span class="cursor" aria-hidden="true"></span></div></div>
+          <div class="term-actions"><span class="status" id="status">process exited · code 0</span><div style="display:flex;gap:8px"><button class="copy" id="copyButton" type="button" aria-label="Copy the code">copy code</button><button class="run" id="runButton" type="button">▶ &nbsp;run again</button></div></div>
+        </section>
+      </section>
+    </main>
+    <footer class="lower"><span>built with <b>curiosity</b> &amp; a little caffeine</span><a class="social" href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noreferrer">keep exploring ↗</a></footer>
+  </div>
+  <script>
+    const output = document.getElementById('terminalOutput');
+    const runButton = document.getElementById('runButton');
+    const status = document.getElementById('status');
+    const copyButton = document.getElementById('copyButton');
+    runButton.addEventListener('click', () => {
+      runButton.disabled = true;
+      runButton.textContent = '⌛ running';
+      status.textContent = 'executing hello-world.js…';
+      output.innerHTML = '<div><span class="comment">// the classic first step</span></div><div><span class="prompt">$</span> <span class="cmd">node hello-world.js</span></div><div class="comment new-line">starting node process<span class="cursor" aria-hidden="true"></span></div>';
+      window.setTimeout(() => {
+        output.innerHTML = '<div><span class="comment">// the classic first step</span></div><div><span class="prompt">$</span> <span class="cmd">node hello-world.js</span></div><div class="output new-line">Hello, World! ✨</div><div class="comment new-line">// and away we go</div>';
+        status.textContent = 'process exited · code 0';
+        runButton.disabled = false;
+        runButton.textContent = '▶  run again';
+      }, 750);
+    });
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText("console.log('Hello, World!');");
+        copyButton.textContent = 'copied ✓';
+      } catch {
+        copyButton.textContent = 'console.log(...)';
+      }
+      window.setTimeout(() => { copyButton.textContent = 'copy code'; }, 1600);
+    });
+  </script>
 </body>
 </html>
+
